@@ -1,0 +1,115 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template report_cohortdetail/indexform
+
+    TODO describe template indexform
+
+    Example context (json):
+    {
+    }
+}}
+{{defaultcategory}}
+<div class="topcohorts">
+    <div class="content">
+        <div class="choice">
+            <form class="d-flex choicecontainer">
+                <div class="d-flex choiceselect">
+                    <input
+                        type="radio"
+                        name="choice"
+                        id="choicesystem"
+                        value="system"
+                        {{! We check the radio if the settings are set to system.}}
+                        {{#system}}
+                            checked
+                        {{/system}}
+                    >
+                    <label for="choicesystem">
+                        {{#str}} systemcohorts, report_cohortdetail {{/str}}
+                    </label>
+                </div>
+                <div class="d-flex choiceselect">
+                    <input
+                        type="radio"
+                        name="choice"
+                        id="choicecategory"
+                        value="category"
+                        {{! We check the radio if the settings are set to category.}}
+                        {{#category}}
+                            checked
+                        {{/category}}
+                    >
+                    <label for="choicecategory">
+                        {{#str}} categorycohorts, report_cohortdetail {{/str}}
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div
+        {{! We add the class d-none if the main form is not the system form. }}
+        {{#category}}
+            class="searchform searchformsys d-none"
+        {{/category}}
+        {{! Else we add the class searchform.}}
+        {{^category}}
+            class="searchform searchformsys"
+        {{/category}}
+        >
+        {{! We call the form from the variable form. }}
+        {{{mformsystem}}}
+        </div>
+        <div
+        {{! We add the class d-none if the main form is not the category form. }}
+        {{#system}}
+            class="searchform searchformcategory d-none"
+        {{/system}}
+        {{! Else we add the class searchform.}}
+        {{^system}}
+            class="searchform searchformcategory"
+        {{/system}}
+        >
+        {{! We call the form from the variable form. }}
+        {{{mformcategory}}}
+        </div>
+    </div>
+    {{! We write the mycourses button }}
+    <div class="mycourses">
+        {{{mycourses}}}
+    </div>
+</div>
+{{! We display the alert if we have no member in a cohort }}
+{{#alertmember}}
+    {{{alertmember}}}
+{{/alertmember}}
+
+{{! We display the alert if we haven't found the cohort }}
+{{#alertcohort}}
+    {{{alertcohort}}}
+{{/alertcohort}}
+
+{{! We display the alert if we haven't found the course }}
+{{#alertcourse}}
+    {{{alertcourse}}}
+{{/alertcourse}}
+
+{{! We display the table if we have datas to display }}
+<div class="tablecohorts">
+    {{#table}}
+        {{{table}}}
+    {{/table}}
+</div>

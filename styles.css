@@ -1,0 +1,129 @@
+/* This file is used to style the cohortdetail report plugin */
+
+/* index.php style */
+
+/* This is the main container for the report */
+.topcohorts {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-bottom: 20px;
+}
+
+/* This is the same container for the right side with the buttons, but for the non-admin users */
+.buttonnotadmin {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: end;
+}
+
+/* This is the container for all the choices between system and category cohort */
+.choicecontainer {
+    gap: 2rem;
+}
+
+/* This is the container for the choice between system and category cohort */
+.choiceselect {
+    gap: 0.5rem;
+}
+
+/* The labels for the choice between system and category cohort */
+.choiceselect label {
+    margin-bottom: 0;
+}
+
+/* This is the container of the autocomplete and it's label */
+.autocompletecohort {
+    flex-direction: column;
+}
+
+/* This is the label of the autocomplete */
+.autocompletecohort label {
+    font-size: 1.2em;
+}
+
+/* This is the container of the button to submit the cohort */
+.buttonarcohort {
+    flex-direction: column;
+}
+
+/* admin.php style */
+
+/* The title of the right side */
+.adminpermtitle {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* This is 3 different containers for an autocomplete or a submit button */
+/* It is used to make the elements to be displayed in a column */
+.autocompleterole,
+.autocompleteuser,
+.submitbuttonadmin {
+    flex-direction: column;
+}
+
+/* This is the main container for all the page */
+.admincontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* This is the return link */
+.returnlink {
+    margin-bottom: 20px;
+}
+
+/* This is the container for the right side */
+/* It make the elements to be displayed in a column */
+/* So first the button to go to my courses, then the table */
+.rightstable {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+/* This is the container of the my courses link */
+.mycourses {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+/* This is the title of the table */
+.adminrighttitle {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* This is a classe to center the delete icon + the text in the header of the table */
+.center-icon {
+    text-align: center;
+}
+
+/* mycourses.php style */
+
+/* This is a container to store the 2 buttons on the top of the page */
+.topbuttonsmycourses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* To make the return link on the left side */
+.returnlinkmycourses {
+    justify-self: start;
+}
+
+/* To make the admin link on the right side */
+.adminmycourses {
+    justify-self: end;
+}
+
+/* The container of the main table + it's title */
+.tablemycourses {
+    margin-top: 20px;
+}
+
+/* The title of the table */
+.titlemycourses {
+    font-size: 1.2em;
+    font-weight: 500;
+}
