@@ -7,6 +7,18 @@
 
 Cohort Detail is a report plugin for Moodle that allows you to view the members and the courses of a cohort.
 
+## Requirements ##
+
+- Moodle 4.3 (Build: 2023100900) or later (Tested on 4.3 and 4.4-beta)
+
+The Github Actions validate the plugin on Moodle 4.3 with different PHP versions and Database engines :
+- PHP 8.0 with MariaDB 10.6
+- PHP 8.1 with MariaDB 10.6
+- PHP 8.2 with MariaDB 10.6
+- PHP 8.0 with PostgreSQL 13
+- PHP 8.1 with PostgreSQL 13
+- PHP 8.2 with PostgreSQL 13
+
 ## Features ##
 
 - View the members of a cohort
