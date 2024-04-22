@@ -314,42 +314,8 @@ if (!empty($courses)) {
                     }
                 }
             } else {
-                // If the cohort array is empty, we display the course name and an empty cell.
-
-                // Get the category of the course.
-                $category = $DB->get_record('course_categories', ['id' => $course->category]);
-
-                // We verify if the category exists (not a boolean).
-                if (!is_bool($category)) {
-
-                    // We explode the category path to get the real name of the category.
-                    $categorypath = explode('/', $category->path);
-                    $categoryname = '';
-                    for ($i = 1; $i < count($categorypath); $i++) {
-                        // First we get the real name from the database.
-                        $realname = $DB->get_record('course_categories', ['id' => $categorypath[$i]]);
-                        // We add the real name to the category name.
-                        if ($categoryname == '') {
-                            $categoryname = '/ ' . $realname->name;
-                        } else {
-                            $categoryname = $categoryname . ' / ' . $realname->name;
-                        }
-                    }
-                } else {
-                    // If the category does not exist, we set the category name to an empty string.
-                    $categoryname = '';
-                }
-
-                // We create the course url.
-                $courseurl = new moodle_url('/course/view.php', ['id' => $course->id]);
-
-                // We add the course name + the category path to the table.
-                $table->data[] = [
-                    // We display the course name as a link.
-                    html_writer::tag('a', $course->fullname, ['href' => $courseurl])
-                    . html_writer::tag('p', $categoryname),
-                    '',
-                ];
+                // If the cohort array is empty, we remove the course from the array.
+                unset($courses[$course->id]);
             }
         } else {
             // We display a moodle exception.
