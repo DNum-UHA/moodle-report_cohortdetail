@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'report_cohortdetail';
 $plugin->release = '0.1.4';
-$plugin->version = 2024041702;
+$plugin->version = 2024042200;
 $plugin->requires = 2023100900;
 $plugin->maturity = MATURITY_BETA;
