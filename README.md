@@ -1,5 +1,9 @@
 # Cohort Detail #
 
+## Table of contents ##
+
+[[_TOC_]]
+
 ## Languages ##
 
 - [🇬🇧 English](README.md)

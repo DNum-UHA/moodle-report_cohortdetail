@@ -27,6 +27,7 @@ namespace report_cohortdetail;
 // Include the necessary libraries.
 use moodleform;
 use context_system;
+use context;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -153,10 +154,27 @@ class cohortdetail_form_category extends moodleform {
         // Get the system context.
         $context = context_system::instance();
         // Get all the cohorts.
-        $sql = "SELECT c.id as ci, c.name as cn, c.description as cd
-        FROM {cohort} c
-        WHERE c.visible = :visible AND c.contextid != :context
-        ORDER BY cn";
+        $sql = "SELECT
+            c.id as ci,
+            c.name as cn,
+            c.description as cd,
+            ccat.name as catname
+        FROM
+            {cohort} c
+        JOIN
+            {context} ctxt
+        ON
+            c.contextid = ctxt.id
+        JOIN
+            {course_categories} ccat
+        ON
+            ctxt.instanceid = ccat.id
+        WHERE
+            c.visible = :visible
+        AND
+            c.contextid != :context
+        ORDER BY
+            cn";
 
         // Execute the SQL query.
         $cohorts = $DB->get_records_sql($sql, ['visible' => 1, 'context' => $context->id]);
@@ -174,7 +192,10 @@ class cohortdetail_form_category extends moodleform {
         }
 
         // Create an array of cohorts with the cohort name and description for the autocomplete element.
-        $cohorts = array_map(fn($cohort) => $cohort->cn . ' (' . $cohort->cd . ')', $cohorts);
+        $cohorts = array_map(
+            fn($cohort) => '[' . $cohort->catname . '] ' . $cohort->cn . ' (' . $cohort->cd . ')',
+            $cohorts
+        );
 
         // Set the options for the autocomplete element.
         $options = [
