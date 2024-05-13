@@ -2,7 +2,16 @@
 
 ## Table of contents ##
 
-[[_TOC_]]
+- [Cohort Detail](#cohort-detail)
+  - [Table of contents](#table-of-contents)
+  - [Languages](#languages)
+  - [Requirements](#requirements)
+  - [Features](#features)
+  - [Installing via uploaded ZIP file](#installing-via-uploaded-zip-file)
+  - [Installing manually](#installing-manually)
+  - [Tests](#tests)
+  - [Javascript Grunt tasks](#javascript-grunt-tasks)
+  - [License](#license)
 
 ## Languages ##
 

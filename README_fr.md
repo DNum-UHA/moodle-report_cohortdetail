@@ -2,7 +2,16 @@
 
 ## Sommaire ##
 
-[[_TOC_]]
+- [Cohort Detail](#cohort-detail)
+  - [Sommaire](#sommaire)
+  - [Langues](#langues)
+  - [Prérequis](#prérequis)
+  - [Fonctionnalités](#fonctionnalités)
+  - [Installation via un fichier ZIP téléchargé](#installation-via-un-fichier-zip-téléchargé)
+  - [Installation manuelle](#installation-manuelle)
+  - [Tests](#tests)
+  - [Tâches Grunt JavaScript](#tâches-grunt-javascript)
+  - [Licence](#licence)
 
 ## Langues ##
 
