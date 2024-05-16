@@ -7,6 +7,7 @@
   - [Languages](#languages)
   - [Requirements](#requirements)
   - [Features](#features)
+  - [Plugin Settings](#plugin-settings)
   - [Installing via uploaded ZIP file](#installing-via-uploaded-zip-file)
   - [Installing manually](#installing-manually)
   - [Tests](#tests)
@@ -37,6 +38,18 @@ The Github Actions validate the plugin on Moodle 4.3 with different PHP versions
 - View the members of a cohort
 - View the courses of a cohort (You must have the capability to view the course to see it in the list)
 - Your courses with the cohort(s) that are enrolled in them
+
+## Plugin Settings ##
+
+The plugin has settings in the administration panel:
+
+Go to _Site administration > Plugins > Reports > Cohort Detail - Administation_.
+
+- **What systems roles can access this plugin?:** Choose the system roles that can access the plugin.
+- **What roles in courses can access this plugin?:** Choose the roles in courses that can access the plugin.
+- **Default Cohort Type:** Choose the default cohort type to use when searching for cohorts.
+
+You also have a list of Roles that can access the plugin.
 
 ## Installing via uploaded ZIP file ##
 

@@ -7,6 +7,7 @@
   - [Langues](#langues)
   - [Prérequis](#prérequis)
   - [Fonctionnalités](#fonctionnalités)
+  - [Paramètres du plugin](#paramètres-du-plugin)
   - [Installation via un fichier ZIP téléchargé](#installation-via-un-fichier-zip-téléchargé)
   - [Installation manuelle](#installation-manuelle)
   - [Tests](#tests)
@@ -37,6 +38,18 @@ Les Github Actions valident le plugin sur Moodle 4.3 avec différentes versions 
 - Voir les membres d'une cohorte
 - Voir les cours d'une cohorte (Vous devez avoir la capacité de voir le cours pour le voir dans la liste)
 - Vos cours avec la ou les cohortes qui y sont inscrites
+
+## Paramètres du plugin ##
+
+Le plugin a des paramètres dans le panneau d'administration :
+
+Rendez-vous dans _Administration du site > Plugins > Rapports > Détail des cohortes - Administration_.
+
+- **Quels rôles systèmes peuvent accéder à ce plugin ? :** Choisissez les rôles systèmes qui peuvent accéder au plugin.
+- **Quels rôles de cours peuvent accéder à ce plugin ? :** Choisissez les rôles dans un cours qui peuvent accéder au plugin.
+- **Type de cohorte par défaut :** Choisissez le type de cohorte par défaut à utiliser lors de la recherche de cohortes.
+
+Vous avez également une liste des rôles qui peuvent accéder au plugin.
 
 ## Installation via un fichier ZIP téléchargé ##
 
