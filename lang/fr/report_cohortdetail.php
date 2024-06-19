@@ -28,6 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Détail des cohortes';
 $string['adminsettings'] = 'Administration';
 $string['mycourses'] = 'Mes cours';
+$string['mycoursesdesc'] = 'Accéder à la liste de tous vos cours liés à au moins une cohorte.';
 $string['searchtitle'] = 'Rechercher une cohorte';
 $string['searchmember'] = 'Membres de cette cohorte';
 $string['searchcourse'] = 'Cours avec cette cohorte';

@@ -4,8 +4,6 @@
 
 /* This is the main container for the report */
 .topcohorts {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
     margin-bottom: 20px;
 }
 
@@ -79,13 +77,6 @@
 .rightstable {
     display: grid;
     grid-template-rows: 1fr 3fr;
-}
-
-/* This is the container of the my courses link */
-.mycourses {
-    display: flex;
-    justify-content: end;
-    align-items: start;
 }
 
 /* This is the title of the table */

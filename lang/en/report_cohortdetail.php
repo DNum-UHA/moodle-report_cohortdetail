@@ -28,6 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Cohort Detail';
 $string['adminsettings'] = 'Administration';
 $string['mycourses'] = 'My courses';
+$string['mycoursesdesc'] = 'Access to the list of all your courses that are linked to at least one cohort.';
 $string['searchtitle'] = 'Search a cohort';
 $string['searchmember'] = 'Members of this cohort';
 $string['searchcourse'] = 'Courses with this cohort';

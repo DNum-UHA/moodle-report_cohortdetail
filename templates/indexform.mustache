@@ -17,10 +17,26 @@
 {{!
     @template report_cohortdetail/indexform
 
-    TODO describe template indexform
+    This template is used to display the form for the index page of the report cohortdetail plugin.
+    It displays :
+    - A choice between system and category cohorts.
+    - A form to search for system cohorts.
+    - A form to search for category cohorts.
+    - Alerts if we have no member in a cohort, if we haven't found the cohort or if we haven't found the course.
+    - A table with the datas to display.
+    - A button to display the courses of the user.
 
     Example context (json):
     {
+        "system": true,
+        "category": false,
+        "mformsystem": "The form to search for system cohorts.",
+        "mformcategory": "The form to search for category cohorts.",
+        "alertmember": "The alert if we have no member in a cohort.",
+        "alertcohort": "The alert if we haven't found the cohort.",
+        "alertcourse": "The alert if we haven't found the course.",
+        "table": "The table with the datas to display.",
+        "mycourses": "The button to display the courses of the user."
     }
 }}
 {{defaultcategory}}
@@ -87,10 +103,6 @@
         {{{mformcategory}}}
         </div>
     </div>
-    {{! We write the mycourses button }}
-    <div class="mycourses">
-        {{{mycourses}}}
-    </div>
 </div>
 {{! We display the alert if we have no member in a cohort }}
 {{#alertmember}}
@@ -112,4 +124,19 @@
     {{#table}}
         {{{table}}}
     {{/table}}
+</div>
+{{! We display the container for the mycourses button.}}
+<div class="mycoursescontainer">
+    {{! We add an horizontal line.}}
+    <hr/>
+    <h2>
+        {{#str}} mycourses, report_cohortdetail {{/str}}
+    </h2>
+    <p>
+        {{#str}} mycoursesdesc, report_cohortdetail {{/str}}
+    </p>
+    {{! We write the mycourses button }}
+    <div class="mycourses">
+        {{{mycourses}}}
+    </div>
 </div>
