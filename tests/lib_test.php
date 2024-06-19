@@ -24,7 +24,7 @@ namespace report_cohortdetail;
  * @copyright  2024 YOUR NAME <your@email.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class lib_test extends \advanced_testcase {
+final class lib_test extends \advanced_testcase {
 
     public static function setUpBeforeClass(): void {
         global $CFG;
@@ -38,7 +38,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::cohort_get_members
      */
-    public function test_cohort_get_members_array() {
+    public function test_cohort_get_members_array(): void {
         // Using moodle method we get the id of a existing cohort.
         $cohortid = $this->getDataGenerator()->create_cohort()->id;
         // We verify that the function returns an array.
@@ -54,7 +54,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::cohort_get_members
      */
-    public function test_cohort_get_members_empty() {
+    public function test_cohort_get_members_empty(): void {
         // We call the function with an empty cohort id.
         $this->expectException(\moodle_exception::class);
         cohort_get_members('');
@@ -67,7 +67,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::cohort_get_members
      */
-    public function test_cohort_get_members_not_numeric() {
+    public function test_cohort_get_members_not_numeric(): void {
         // We call the function with a non numeric cohort id.
         $this->expectExceptionMessage(get_string('error:notnumericcohortid', 'report_cohortdetail'));
         cohort_get_members('notnumeric');
@@ -80,7 +80,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::cohort_get_members
      */
-    public function test_cohort_get_members_not_found() {
+    public function test_cohort_get_members_not_found(): void {
         // We call the function with a non existing cohort id.
         $this->assertEmpty(cohort_get_members(-1));
     }
@@ -92,7 +92,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::cohort_get_members
      */
-    public function test_cohort_get_members_found() {
+    public function test_cohort_get_members_found(): void {
         // Using moodle method we get the id of a existing cohort.
         $cohortid = $this->getDataGenerator()->create_cohort()->id;
         // We create and add a user to the cohort.
@@ -112,7 +112,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::cohort_get_members
      */
-    public function test_cohort_get_members_no_members() {
+    public function test_cohort_get_members_no_members(): void {
         // Using moodle method we get the id of a existing cohort.
         $cohortid = $this->getDataGenerator()->create_cohort()->id;
         // We verify that the function returns an empty array.
@@ -128,7 +128,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::get_courses_with_cohort
      */
-    public function test_get_courses_with_cohort_array() {
+    public function test_get_courses_with_cohort_array(): void {
         // Using moodle method we get the id of a existing cohort.
         $cohortid = $this->getDataGenerator()->create_cohort()->id;
         // We verify that the function returns an array.
@@ -144,7 +144,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::get_courses_with_cohort
      */
-    public function test_get_courses_with_cohort_empty() {
+    public function test_get_courses_with_cohort_empty(): void {
         // We call the function with an empty cohort id.
         $this->expectException(\moodle_exception::class);
         get_courses_with_cohort('');
@@ -157,7 +157,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::get_courses_with_cohort
      */
-    public function test_get_courses_with_cohort_not_numeric() {
+    public function test_get_courses_with_cohort_not_numeric(): void {
         // We call the function with a non numeric cohort id.
         $this->expectExceptionMessage(get_string('error:notnumericcohortid', 'report_cohortdetail'));
         get_courses_with_cohort('notnumeric');
@@ -170,7 +170,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::get_courses_with_cohort
      */
-    public function test_get_courses_with_cohort_not_found() {
+    public function test_get_courses_with_cohort_not_found(): void {
         // We call the function with a non existing cohort id.
         $this->assertEmpty(get_courses_with_cohort(-1));
     }
@@ -182,7 +182,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::get_courses_with_cohort
      */
-    public function test_get_courses_with_cohort_found() {
+    public function test_get_courses_with_cohort_found(): void {
         // Using moodle method we get the id of a existing cohort.
         $cohortid = $this->getDataGenerator()->create_cohort()->id;
         // We create and add a course to the cohort.
@@ -207,7 +207,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::get_courses_with_cohort
      */
-    public function test_get_courses_with_cohort_no_courses() {
+    public function test_get_courses_with_cohort_no_courses(): void {
         // Using moodle method we get the id of a existing cohort.
         $cohortid = $this->getDataGenerator()->create_cohort()->id;
         // We verify that the function returns an empty array.
@@ -223,7 +223,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::report_cohortdetail_update_roles
      */
-    public function test_report_cohortdetail_update_roles() {
+    public function test_report_cohortdetail_update_roles(): void {
         $systemcontext = \context_system::instance();
 
         // First we create two roles.
@@ -259,7 +259,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::report_cohortdetail_update_roles
      */
-    public function test_report_cohortdetail_update_roles_remove() {
+    public function test_report_cohortdetail_update_roles_remove(): void {
         $systemcontext = \context_system::instance();
 
         // First we create two roles.
@@ -298,7 +298,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::report_cohortdetail_update_roles
      */
-    public function test_report_cohortdetail_update_roles_no_change() {
+    public function test_report_cohortdetail_update_roles_no_change(): void {
         $systemcontext = \context_system::instance();
 
         // First we create two roles.
@@ -338,7 +338,7 @@ class lib_test extends \advanced_testcase {
      * @return void
      * @covers ::report_cohortdetail_update_users
      */
-    public function test_report_cohortdetail_update_roles_empty() {
+    public function test_report_cohortdetail_update_roles_empty(): void {
         $systemcontext = \context_system::instance();
 
         // We add this roles to the settings.
