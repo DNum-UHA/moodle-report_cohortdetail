@@ -26,14 +26,9 @@
 /**
  * Execute report_cohortdetail upgrade from the given old version.
  *
- * @param int $oldversion
  * @return bool
  */
-function xmldb_report_cohortdetail_upgrade($oldversion) {
-    global $DB;
-
-    $dbman = $DB->get_manager();
-
+function xmldb_report_cohortdetail_upgrade() {
     // For further information please read {@link https://docs.moodle.org/dev/Upgrade_API}.
     //
     // You will also have to create the db/install.xml file by using the XMLDB Editor.
