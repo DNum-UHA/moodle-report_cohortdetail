@@ -1,6 +1,17 @@
 name: Moodle Plugin CI
 
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+      - 'README_fr.md'
+      - '.github/workflows/gha.dist.yml'
+  pull_request:
+    paths-ignore:
+      - 'README.md'
+      - 'README_fr.md'
+      - '.github/workflows/gha.dist.yml'
+
 
 jobs:
 

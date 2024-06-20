@@ -23,15 +23,33 @@ Détail des cohortes est un plugin de rapport pour Moodle qui vous permet de voi
 
 ## Prérequis ##
 
-- Moodle 4.3 (Build: 2023100900) ou ultérieur (Testé sur 4.3 et 4.4-beta)
+- Moodle 4.1 (Build: 2022112800) ou ultérieur (Testé sur 4.1, 4.3 et 4.4)
 
-Les Github Actions valident le plugin sur Moodle 4.3 avec différentes versions de PHP et moteurs de base de données :
-- PHP 8.0 avec MariaDB 10.6
-- PHP 8.1 avec MariaDB 10.6
-- PHP 8.2 avec MariaDB 10.6
-- PHP 8.0 avec PostgreSQL 13
-- PHP 8.1 avec PostgreSQL 13
-- PHP 8.2 avec PostgreSQL 13
+Les Github Actions valident le plugin sur :
+
+- Moodle 4.4 avec différentes versions de PHP et moteurs de base de données :
+    - PHP 8.1 avec MariaDB 10.6
+    - PHP 8.2 avec MariaDB 10.6
+    - PHP 8.3 avec MariaDB 10.6
+    - PHP 8.1 avec PostgreSQL 13
+    - PHP 8.2 avec PostgreSQL 13
+    - PHP 8.3 avec PostgreSQL 13
+
+- Moodle 4.3 avec différentes versions de PHP et moteurs de base de données :
+    - PHP 8.0 avec MariaDB 10.6
+    - PHP 8.1 avec MariaDB 10.6
+    - PHP 8.2 avec MariaDB 10.6
+    - PHP 8.0 avec PostgreSQL 13
+    - PHP 8.1 avec PostgreSQL 13
+    - PHP 8.2 avec PostgreSQL 13
+
+- Moodle 4.1 avec différentes versions de PHP et moteurs de base de données :
+    - PHP 7.4 avec MariaDB 10.6
+    - PHP 8.0 avec MariaDB 10.6
+    - PHP 8.1 avec MariaDB 10.6
+    - PHP 7.4 avec PostgreSQL 13
+    - PHP 8.0 avec PostgreSQL 13
+    - PHP 8.1 avec PostgreSQL 13
 
 ## Fonctionnalités ##
 
