@@ -28,7 +28,7 @@
  *
  * @return bool
  */
-function xmldb_report_cohortdetail_upgrade() {
+function xmldb_report_cohortdetail_upgrade($oldversion) {
     // For further information please read {@link https://docs.moodle.org/dev/Upgrade_API}.
     //
     // You will also have to create the db/install.xml file by using the XMLDB Editor.
