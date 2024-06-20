@@ -26,6 +26,7 @@
 /**
  * Execute report_cohortdetail upgrade from the given old version.
  *
+ * @param int $oldversion : The version we are upgrading from.
  * @return bool
  */
 function xmldb_report_cohortdetail_upgrade($oldversion) {
