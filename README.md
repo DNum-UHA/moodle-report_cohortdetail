@@ -8,6 +8,7 @@
   - [Requirements](#requirements)
   - [Features](#features)
   - [Plugin Settings](#plugin-settings)
+  - [Documentation](#documentation)
   - [Installing via uploaded ZIP file](#installing-via-uploaded-zip-file)
   - [Installing manually](#installing-manually)
   - [Tests](#tests)
@@ -68,6 +69,14 @@ Go to _Site administration > Plugins > Reports > Cohort Detail - Administation_.
 - **Default Cohort Type:** Choose the default cohort type to use when searching for cohorts.
 
 You also have a list of Roles that can access the plugin.
+
+## Documentation ##
+
+You can find the documentation for this plugin in the docs directory. The documentation is available in English and French.
+
+[English Documentation](docs/Usage_of_the_Cohort_Detail_plugin.pdf)
+
+[French Documentation](docs/Utilisation_du_plugin_Detail_des_cohortes.pdf)
 
 ## Installing via uploaded ZIP file ##
 

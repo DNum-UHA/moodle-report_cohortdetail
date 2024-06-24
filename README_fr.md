@@ -8,6 +8,7 @@
   - [Prérequis](#prérequis)
   - [Fonctionnalités](#fonctionnalités)
   - [Paramètres du plugin](#paramètres-du-plugin)
+  - [Documentation](#documentation)
   - [Installation via un fichier ZIP téléchargé](#installation-via-un-fichier-zip-téléchargé)
   - [Installation manuelle](#installation-manuelle)
   - [Tests](#tests)
@@ -68,6 +69,14 @@ Rendez-vous dans _Administration du site > Plugins > Rapports > Détail des coho
 - **Type de cohorte par défaut :** Choisissez le type de cohorte par défaut à utiliser lors de la recherche de cohortes.
 
 Vous avez également une liste des rôles qui peuvent accéder au plugin.
+
+## Documentation ##
+
+Vous pouvez trouver la documentation de ce plugin dans le répertoire docs. La documentation est disponible en anglais et en français.
+
+[Documentation en français](docs/Utilisation_du_plugin_Detail_des_cohortes.pdf)
+
+[Documentation en anglais](docs/Usage_of_the_Cohort_Detail_plugin.pdf)
 
 ## Installation via un fichier ZIP téléchargé ##
 
